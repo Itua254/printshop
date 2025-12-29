@@ -123,15 +123,18 @@ export function getProductImageUrl(imagePath: string | null): string {
 }
 
 /**
- * Format price in KES
+ * Format price using the configured currency
  */
 export function formatPrice(amount: number): string {
-    return new Intl.NumberFormat('en-KE', {
+    const currency = process.env.NEXT_PUBLIC_CURRENCY || 'KES'
+    const locale = currency === 'KES' ? 'en-KE' : 'en-US'
+
+    return new Intl.NumberFormat(locale, {
         style: 'currency',
-        currency: 'KES',
-        minimumFractionDigits: 2,
+        currency: currency,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 2,
-    }).format(amount)
+    }).format(amount).replace('.00', '')
 }
 
 /**
