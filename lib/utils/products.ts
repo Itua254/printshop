@@ -115,8 +115,9 @@ export function getProductImageUrl(imagePath: string | null): string {
     if (imagePath.startsWith('http')) return imagePath
 
     // If it's a local path, convert to Supabase Storage URL
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL
     const filename = imagePath.replace('/images/', '')
+
 
     return `${supabaseUrl}/storage/v1/object/public/product-images/${filename}`
 }
