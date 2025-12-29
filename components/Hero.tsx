@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
                 <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-12 rounded-[2.5rem] shadow-2xl">
                     <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-amber-400 uppercase border border-amber-400/30 rounded-full">
-                        Lodwar's Finest Printing
+                        Turkana's Finest Printing
                     </span>
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tight">
                         Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">Print</span>

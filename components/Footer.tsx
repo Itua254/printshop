@@ -9,9 +9,9 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* About */}
                     <div>
-                        <h4 className="text-white text-lg font-bold mb-4">ArshrozyPrint</h4>
-                        <p className="text-sm leading-relaxed">
-                            Redefining printing standards in Kenya. We prioritize quality, speed, and premium aesthetics.
+                        <h3 className="text-xl font-bold text-white mb-4">Turkana Printing House</h3>
+                        <p className="text-zinc-400 leading-relaxed">
+                            Premium agency-standard printing services in Lodwar. Precision, quality, and speed.
                         </p>
                     </div>
 

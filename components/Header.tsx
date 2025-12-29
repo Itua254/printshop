@@ -21,9 +21,16 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <span className="text-2xl font-bold text-gray-900">
-                            Arshrozy<span className="text-amber-600">Print</span>
+                    <Link href="/" className="flex items-center gap-2">
+                        <Image
+                            src="/logo.png"
+                            alt="Turkana Printing House"
+                            width={40}
+                            height={40}
+                            className="rounded-lg object-contain"
+                        />
+                        <span className="text-xl font-black tracking-tighter text-gray-900 hidden sm:block">
+                            TURKANA<span className="text-amber-600">PRINT</span>
                         </span>
                     </Link>
 
