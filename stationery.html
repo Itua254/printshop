@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Stationery - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .stat-hero {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('images/mugs-white.jpg');
+            /* Reusing professional office vibe image */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                    <li><a href="stamps.html">Stamps</a></li>
+                    <li><a href="stationery.html" class="active">Stationery</a></li>
+                    <li><a href="mugs.html">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="merch-hero stat-hero">
+            <div class="hero-content">
+                <h1>Corporate<br>Efficiency.</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Essential office tools customized for your brand. Receipt books, invoices, and calendars.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Carbonless (NCR)</h3>
+                    <p>Duplicate and triplicate copies without messy carbon paper.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Sequential Numbering</h3>
+                    <p>Keep your records organized with custom serial numbers.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Branding</h3>
+                    <p>Your logo on every page for a professional image.</p>
+                </div>
+            </div>
+
+            <!-- Showcase Grid -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Office Essentials</h2>
+
+            <div class="showcase-grid">
+                <!-- Receipt Book -->
+                <div class="showcase-card" onclick="selectOption('receipt')">
+                    <img src="images/marketing.jpg" alt="Receipt Book">
+                    <h4>Receipt Book</h4>
+                    <p>KES 500</p>
+                </div>
+
+                <!-- Invoice Book -->
+                <div class="showcase-card" onclick="selectOption('invoice')">
+                    <img src="images/marketing.jpg" alt="Invoice Book">
+                    <h4>Invoice/Delivery Book</h4>
+                    <p>KES 500</p>
+                </div>
+
+                <!-- Calendar -->
+                <div class="showcase-card" onclick="selectOption('calendar')">
+                    <img src="images/marketing.jpg" alt="Wall Calendar">
+                    <h4>Wall Calendar (A3)</h4>
+                    <p>KES 90</p>
+                </div>
+            </div>
+
+            <!-- Order Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/marketing.jpg" alt="Selected Product">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Order Stationery</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Select your item type below.
+                    </p>
+
+                    <form id="stat-form">
+                        <div class="form-group">
+                            <label for="st-type">Item Type</label>
+                            <select id="st-type">
+                                <option value="receipt">Receipt Book (KES 500)</option>
+                                <option value="invoice">Invoice Book (KES 500)</option>
+                                <option value="calendar">Wall Calendar (KES 90)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="st-qty">Quantity</label>
+                            <input type="number" id="st-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="st-total" class="total-price">KES 500.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="stationery.html">Stationery</a></li>
+                    <li><a href="business-cards.html">Business Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectOption(val) {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            const select = document.getElementById('st-type');
+            select.value = val;
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>

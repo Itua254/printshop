@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Branding - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .car-hero {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('images/car-full.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                    <li><a href="car-branding.html" class="active">Branding</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                    <li><a href="mugs.html">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="merch-hero car-hero">
+            <div class="hero-content">
+                <h1>Drive Your<br>Message.</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Turn your fleet into mobile billboards with premium vehicle wraps and branding.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>UV Resistant</h3>
+                    <p>Wraps that hold their color even under the hot sun.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Paint Protection</h3>
+                    <p>Vinyl layers that protect your vehicle's original paint.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Expert Install</h3>
+                    <p>Professional application for a bubble-free finish.</p>
+                </div>
+            </div>
+
+            <!-- Showcase Grid -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Branding Packages</h2>
+
+            <div class="showcase-grid">
+                <!-- Full Wrap -->
+                <div class="showcase-card" onclick="selectOption('full')">
+                    <img src="images/car-full.jpg" alt="Full Vehicle Wrap">
+                    <h4>Full Vehicle Wrap</h4>
+                    <p>KES 45,000</p>
+                </div>
+
+                <!-- Partial -->
+                <div class="showcase-card" onclick="selectOption('partial')">
+                    <img src="images/car-partial.jpg" alt="Partial Branding">
+                    <h4>Partial Branding</h4>
+                    <p>KES 25,000</p>
+                </div>
+
+                <!-- Tint -->
+                <div class="showcase-card" onclick="selectOption('tint')">
+                    <img src="images/car-tint.jpg" alt="Window Tint">
+                    <h4>Window Graphic Tint</h4>
+                    <p>KES 8,000</p>
+                </div>
+            </div>
+
+            <!-- Order Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/car-full.jpg" alt="Selected Product">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Select Service</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Choose your branding package below.
+                    </p>
+
+                    <form id="branding-form">
+                        <div class="form-group">
+                            <label for="br-type">Service Type</label>
+                            <select id="br-type">
+                                <option value="full">Full Vehicle Wrap (KES 45,000)</option>
+                                <option value="partial">Partial Branding (KES 25,000)</option>
+                                <option value="tint">Window Graphic Tint (KES 8,000)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="br-qty">Number of Vehicles</label>
+                            <input type="number" id="br-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="br-total" class="total-price">KES 45,000.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="car-branding.html">Vehicle Branding</a></li>
+                    <li><a href="banners.html">Banners</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectOption(val) {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            const select = document.getElementById('br-type');
+            select.value = val;
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>

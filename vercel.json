@@ -1,38 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": ".next",
-  "regions": ["sin1"],
-  "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": {
-      "description": "Supabase project URL",
-      "required": true
-    },
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": {
-      "description": "Supabase anonymous/public key",
-      "required": true
-    },
-    "SUPABASE_SERVICE_KEY": {
-      "description": "Supabase service role key (keep secret!)",
-      "required": true
-    },
-    "NEXT_PUBLIC_WHATSAPP_NUMBER": {
-      "description": "WhatsApp Business number (format: 254769752124)",
-      "value": "254769752124"
-    },
-    "NEXT_PUBLIC_BUSINESS_EMAIL": {
-      "description": "Business contact email",
-      "value": "info@arshrozy.com"
-    },
-    "NEXT_PUBLIC_BUSINESS_NAME": {
-      "description": "Business name",
-      "value": "Arshrozy Printshop"
-    },
-    "NEXT_PUBLIC_CURRENCY": {
-      "description": "Currency code",
-      "value": "KES"
-    }
-  }
+  "outputDirectory": ".next"
 }

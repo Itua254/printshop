@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickers & Decals - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .stickers-hero {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('images/stickers.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="stickers.html" class="active">Stickers</a></li>
+                    <li><a href="banners.html">Banners</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                    <li><a href="mugs.html">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="merch-hero stickers-hero">
+            <div class="hero-content">
+                <h1>Stick With<br>Excellence.</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Custom cut stickers, labels, and decals. Perfect for packaging and branding.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Die-Cut Precision</h3>
+                    <p>Custom shapes cut exactly to your design's edge.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Waterproof</h3>
+                    <p>Vinyl options that resist moisture and fading.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Strong Adhesive</h3>
+                    <p>Sticks securely to boxes, bottles, and more.</p>
+                </div>
+            </div>
+
+            <!-- Showcase Grid -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Label Options</h2>
+
+            <div class="showcase-grid">
+                <!-- Vinyl -->
+                <div class="showcase-card" onclick="selectOption('vinyl')">
+                    <img src="images/stickers.jpg" alt="Vinyl Sticker">
+                    <h4>Standard Vinyl</h4>
+                    <p>KES 1,380</p>
+                </div>
+
+                <!-- Reflective -->
+                <div class="showcase-card" onclick="selectOption('reflective')">
+                    <img src="images/stickers.jpg" alt="Reflective Sticker" style="filter: brightness(1.2);">
+                    <h4>Reflective Safety</h4>
+                    <p>KES 1,800</p>
+                </div>
+
+                <!-- Magnet -->
+                <div class="showcase-card" onclick="selectOption('magnet')">
+                    <img src="images/stickers.jpg" alt="Magnetic Sticker">
+                    <h4>Magnetic Sticker</h4>
+                    <p>KES 1,150</p>
+                </div>
+            </div>
+
+            <!-- Order Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/stickers.jpg" alt="Selected Product">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Order Labels</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Select your sticker material (per square meter).
+                    </p>
+
+                    <form id="sticker-form">
+                        <div class="form-group">
+                            <label for="s-type">Material</label>
+                            <select id="s-type">
+                                <option value="vinyl">Standard Vinyl (KES 1,380)</option>
+                                <option value="reflective">Reflective Safety (KES 1,800)</option>
+                                <option value="magnet">Magnetic Sticker (KES 1,150)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="s-qty">Square Meters</label>
+                            <input type="number" id="s-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="s-total" class="total-price">KES 1,380.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="stickers.html">Stickers</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectOption(val) {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            const select = document.getElementById('s-type');
+            select.value = val;
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>

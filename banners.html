@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banners & Signage - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .banners-hero {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('images/banners.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                    <li><a href="banners.html" class="active">Banners</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                    <li><a href="mugs.html">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="merch-hero banners-hero">
+            <div class="hero-content">
+                <h1>Command<br>Attention.</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Durable, high-quality banners for events, trade shows, and outdoor advertising.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Weather Resistant</h3>
+                    <p>Outdoor-ready materials that withstand the elements.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Portable Design</h3>
+                    <p>Lightweight stands that are easy to set up and carry.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>High Resolution</h3>
+                    <p>Sharp, vivid printing for maximum visibility.</p>
+                </div>
+            </div>
+
+            <!-- Showcase Grid -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Display Solutions</h2>
+
+            <div class="showcase-grid">
+                <!-- Rollup -->
+                <div class="showcase-card" onclick="selectOption('rollup')">
+                    <img src="images/banners.jpg" alt="Broadbase Rollup">
+                    <h4>Broadbase Rollup</h4>
+                    <p>KES 6,000</p>
+                </div>
+
+                <!-- X-Stand -->
+                <div class="showcase-card" onclick="selectOption('xbanner')">
+                    <img src="images/banners.jpg" alt="X-Banner Stand">
+                    <h4>X-Banner Stand</h4>
+                    <p>KES 5,800</p>
+                </div>
+
+                <!-- Doorframe -->
+                <div class="showcase-card" onclick="selectOption('doorframe')">
+                    <img src="images/banners.jpg" alt="Doorframe Banner">
+                    <h4>Doorframe Banner</h4>
+                    <p>KES 7,500</p>
+                </div>
+
+                <!-- Backdrop -->
+                <div class="showcase-card" onclick="selectOption('backdrop')">
+                    <img src="images/banners.jpg" alt="Media Backdrop">
+                    <h4>Media Backdrop (Approx)</h4>
+                    <p>KES 27,000</p>
+                </div>
+            </div>
+
+            <!-- Order Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/banners.jpg" alt="Selected Product">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Configure Your Display</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Choose your banner type below.
+                    </p>
+
+                    <form id="banner-form">
+                        <div class="form-group">
+                            <label for="b-type">Display Type</label>
+                            <select id="b-type">
+                                <option value="rollup">Broadbase Rollup (KES 6,000)</option>
+                                <option value="xbanner">X-Banner Stand (KES 5,800)</option>
+                                <option value="doorframe">Doorframe Banner (KES 7,500)</option>
+                                <option value="teardrop">Teardrop Banner (KES 15,400)</option>
+                                <option value="backdrop">Media Backdrop (KES 27,000)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="b-qty">Quantity</label>
+                            <input type="number" id="b-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="b-total" class="total-price">KES 6,000.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="banners.html">Banners</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectOption(val) {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            const select = document.getElementById('b-type');
+            select.value = val;
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>

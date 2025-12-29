@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamps & Seals - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        .stamps-hero {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('images/stamp-rubber.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                    <li><a href="stamps.html" class="active">Stamps</a></li>
+                    <li><a href="mugs.html">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="merch-hero stamps-hero">
+            <div class="hero-content">
+                <h1>Official Seals<br>& Stamps.</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Authenticate your documents with professional rubber stamps and embossing seals.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Sharp Impression</h3>
+                    <p>Crystal clear text and logos every time you stamp.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Durable Build</h3>
+                    <p>Heavy-duty mechanisms designed for daily office use.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Design</h3>
+                    <p>We tailor the layout to your company requirements.</p>
+                </div>
+            </div>
+
+            <!-- Showcase Grid -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Stamp Types</h2>
+
+            <div class="showcase-grid">
+                <!-- Rubber -->
+                <div class="showcase-card" onclick="selectOption('rubber')">
+                    <img src="images/stamp-rubber.jpg" alt="Rubber Stamp">
+                    <h4>Traditional Rubber Stamp</h4>
+                    <p>KES 1,500</p>
+                </div>
+
+                <!-- Self Inking -->
+                <div class="showcase-card" onclick="selectOption('self')">
+                    <img src="images/stamp-self.jpg" alt="Self-Inking Stamp">
+                    <h4>Self-Inking Stamp</h4>
+                    <p>KES 2,500</p>
+                </div>
+
+                <!-- Dater -->
+                <div class="showcase-card" onclick="selectOption('dater')">
+                    <img src="images/stamp-dater.jpg" alt="Date Stamp">
+                    <h4>Date Stamp</h4>
+                    <p>KES 3,500</p>
+                </div>
+
+                <!-- Seal -->
+                <div class="showcase-card" onclick="selectOption('seal')">
+                    <img src="images/stamp-seal.jpg" alt="Embossing Seal">
+                    <h4>Embossing Seal</h4>
+                    <p>KES 5,500</p>
+                </div>
+            </div>
+
+            <!-- Order Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/stamp-rubber.jpg" alt="Selected Product">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Order Your Stamp</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Select your stamp type below.
+                    </p>
+
+                    <form id="stamp-form">
+                        <div class="form-group">
+                            <label for="st-type">Stamp Type</label>
+                            <select id="st-type">
+                                <option value="rubber">Traditional Rubber Stamp (KES 1,500)</option>
+                                <option value="self">Self-Inking Stamp (KES 2,500)</option>
+                                <option value="dater">Date Stamp (KES 3,500)</option>
+                                <option value="seal">Embossing Seal (KES 5,500)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="st-qty">Quantity</label>
+                            <input type="number" id="st-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="st-total" class="total-price">KES 1,500.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="stamps.html">Stamps</a></li>
+                    <li><a href="business-cards.html">Business Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectOption(val) {
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            const select = document.getElementById('st-type');
+            select.value = val;
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>

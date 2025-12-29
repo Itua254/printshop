@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utensil Branding & Gifts - Arshrozy Printshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Arshrozy<span style="color:var(--accent-gold)">Print</span></a>
+            <button class="mobile-toggle" id="mobile-menu-btn">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business-cards.html">Cards</a></li>
+                    <li><a href="flyers.html">Marketing</a></li>
+                    <li><a href="banners.html">Banners</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                    <!-- Highlighting Merch as Active -->
+                    <li><a href="mugs.html" class="active">Merch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="https://wa.me/254769752124" class="floating-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="merch-hero">
+            <div class="hero-content">
+                <h1>Corporate Gifting &<br>Drinkware Branding</h1>
+                <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">
+                    Make a lasting impression with premium branded mugs, bottles, and travel cups. Perfect for client
+                    gifts and employee appreciation.
+                </p>
+            </div>
+        </section>
+
+        <div class="product-page" style="display:block; max-width:1200px;">
+
+            <!-- 2. Quality Features -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Premium Ceramic</h3>
+                    <p>High-gloss finish that resists fading and chipping.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Dishwasher Safe</h3>
+                    <p>Durable prints that withstand daily washing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Branding</h3>
+                    <p>Full-color sublimation printing for vibrant logos.</p>
+                </div>
+            </div>
+
+            <!-- 3. Product Showcase Grid (Click to Select) -->
+            <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">Explore The Collection</h2>
+
+            <div class="showcase-grid">
+                <!-- Standard Mug -->
+                <div class="showcase-card" onclick="selectMerch('standard')">
+                    <img src="images/mugs-white.jpg" alt="Standard Mug">
+                    <h4>Standard White Mug</h4>
+                    <p>KES 500</p>
+                </div>
+
+                <!-- Magic Mug -->
+                <div class="showcase-card" onclick="selectMerch('magic')">
+                    <img src="images/mugs-magic.jpg" alt="Magic Color Change Mug">
+                    <h4>Magic Mug</h4>
+                    <p>KES 800</p>
+                </div>
+
+                <!-- Travel Mug -->
+                <div class="showcase-card" onclick="selectMerch('travel')">
+                    <img src="images/mugs-travel.jpg" alt="Travel Mug">
+                    <h4>Travel Mug</h4>
+                    <p>KES 1,050</p>
+                </div>
+
+                <!-- Water Bottle -->
+                <div class="showcase-card" onclick="selectMerch('bottle')">
+                    <img src="images/mugs-bottle.jpg" alt="Aluminum Bottle">
+                    <h4>Water Bottle</h4>
+                    <p>KES 750</p>
+                </div>
+            </div>
+
+            <!-- 4. Ordering Calculator Section -->
+            <div class="product-page" id="order-section"
+                style="margin-top:4rem; border-top:1px solid var(--glass-border); padding-top:4rem;">
+                <div class="product-image">
+                    <img src="images/mugs-white.jpg" alt="Selected Product" id="main-merch-image">
+                </div>
+
+                <div class="product-details">
+                    <h2 style="color:var(--accent-gold); margin-bottom:0.5rem;">Start Your Order</h2>
+                    <p style="margin-bottom:2rem; color:var(--text-muted);">
+                        Select your item above or choose from the list below to get an instant quote.
+                    </p>
+
+                    <form id="mug-form">
+                        <div class="form-group">
+                            <label for="m-type">Item Selection</label>
+                            <select id="m-type">
+                                <option value="standard">Standard White Mug (KES 500)</option>
+                                <option value="magic">Magic Color-Change Mug (KES 800)</option>
+                                <option value="travel">Travel Mug (KES 1,050)</option>
+                                <option value="bottle">Water Bottle (KES 750)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="m-qty">Quantity</label>
+                            <input type="number" id="m-qty" value="1" min="1">
+                        </div>
+
+                        <div class="price-display">
+                            <small
+                                style="text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">Total
+                                Cost</small>
+                            <div id="m-total" class="total-price">KES 500.00</div>
+                        </div>
+
+                        <button type="button" class="whatsapp-btn add-cart-btn">
+                            Add to Cart +
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>ArshrozyPrint</h4>
+                <p>The leading choice for corporate branding in Kenya.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="mugs.html">Drinkware</a></li>
+                    <li><a href="apparel.html">Apparel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li>+254 769 752 124</li>
+                    <li>Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Page Specific Script for Showcase CLICK Effect -->
+    <script>
+        function selectMerch(type) {
+            // Scroll to order section
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+
+            // Set dropdown value
+            const select = document.getElementById('m-type');
+            select.value = type;
+
+            // Trigger change event so script.js updates price & image
+            select.dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+
+</html>
