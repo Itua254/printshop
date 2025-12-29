@@ -13,7 +13,6 @@ interface ProductDetailClientProps {
 
 export default function ProductDetailClient({ product }: ProductDetailClientProps) {
     const variants = (product.variants as unknown as ProductVariant[]) || []
-    console.log('Product variants:', variants)
 
     const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(
         variants.length > 0 ? variants[0] : undefined
