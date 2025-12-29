@@ -1,6 +1,7 @@
 import { getProductsByCategory } from '@/lib/utils/products'
 import { notFound } from 'next/navigation'
 import ProductDetailClient from '@/components/ProductDetailClient'
+export const revalidate = 0
 
 interface PageProps {
     params: Promise<{
